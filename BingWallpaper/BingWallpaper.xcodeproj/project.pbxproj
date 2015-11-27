@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		058025ECA64FE94993833267 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A734BD00A4E638AB5115503B /* libPods.a */; };
+		AE1867821C07FBCA00B4B1FC /* FlickrPhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1867811C07FBCA00B4B1FC /* FlickrPhotoInfo.swift */; };
+		AE1867871C08065A00B4B1FC /* FlickrViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1867861C08065A00B4B1FC /* FlickrViewModel.swift */; };
+		AE1867891C0807F100B4B1FC /* FlickrHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1867881C0807F100B4B1FC /* FlickrHttpRequest.swift */; };
+		AE18678B1C08389200B4B1FC /* KeyValueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE18678A1C08389200B4B1FC /* KeyValueObject.swift */; };
+		AE2A94771C05896A00AC34C2 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2A94761C05896A00AC34C2 /* HTTPRequest.swift */; };
+		AE2A94791C058C2300AC34C2 /* BingWallPaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2A94781C058C2300AC34C2 /* BingWallPaper.swift */; };
+		AE2A947C1C05A6F600AC34C2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2A947B1C05A6F600AC34C2 /* Utils.swift */; };
+		AE707B481C07F82800221A71 /* FlickrPeopleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE707B471C07F82800221A71 /* FlickrPeopleInfo.swift */; };
+		AEBE0E9D1C0554F200E2E976 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBE0E9C1C0554F200E2E976 /* AppDelegate.swift */; };
+		AEBE0E9F1C0554F200E2E976 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBE0E9E1C0554F200E2E976 /* ViewController.swift */; };
+		AEBE0EA11C0554F200E2E976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEBE0EA01C0554F200E2E976 /* Assets.xcassets */; };
+		AEBE0EA41C0554F300E2E976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBE0EA21C0554F300E2E976 /* Main.storyboard */; };
+		AEBE0EAC1C05562400E2E976 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBE0EAB1C05562400E2E976 /* ViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5377E94F8182F5F5D5515068 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A734BD00A4E638AB5115503B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE1867811C07FBCA00B4B1FC /* FlickrPhotoInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhotoInfo.swift; sourceTree = "<group>"; };
+		AE1867861C08065A00B4B1FC /* FlickrViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrViewModel.swift; sourceTree = "<group>"; };
+		AE1867881C0807F100B4B1FC /* FlickrHttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrHttpRequest.swift; sourceTree = "<group>"; };
+		AE18678A1C08389200B4B1FC /* KeyValueObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueObject.swift; sourceTree = "<group>"; };
+		AE2A94741C0559DE00AC34C2 /* BingWallpaper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BingWallpaper-Bridging-Header.h"; sourceTree = "<group>"; };
+		AE2A94761C05896A00AC34C2 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		AE2A94781C058C2300AC34C2 /* BingWallPaper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingWallPaper.swift; sourceTree = "<group>"; };
+		AE2A947A1C05A46500AC34C2 /* BingWallpaper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BingWallpaper.entitlements; sourceTree = "<group>"; };
+		AE2A947B1C05A6F600AC34C2 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		AE707B471C07F82800221A71 /* FlickrPeopleInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPeopleInfo.swift; sourceTree = "<group>"; };
+		AEBE0E991C0554F200E2E976 /* BingWallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BingWallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEBE0E9C1C0554F200E2E976 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AEBE0E9E1C0554F200E2E976 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AEBE0EA01C0554F200E2E976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEBE0EA31C0554F300E2E976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AEBE0EA51C0554F300E2E976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEBE0EAB1C05562400E2E976 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		F57F368ECD9B3F1A9A2BE107 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEBE0E961C0554F200E2E976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				058025ECA64FE94993833267 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		264017D30423AC5F466C7B3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A734BD00A4E638AB5115503B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		555D96BC8A636414163A0A83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F57F368ECD9B3F1A9A2BE107 /* Pods.debug.xcconfig */,
+				5377E94F8182F5F5D5515068 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AE1867831C07FF7000B4B1FC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AE2A947B1C05A6F600AC34C2 /* Utils.swift */,
+				AE18678A1C08389200B4B1FC /* KeyValueObject.swift */,
+				AE1867881C0807F100B4B1FC /* FlickrHttpRequest.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		AE1867841C08063600B4B1FC /* BingViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AE2A94761C05896A00AC34C2 /* HTTPRequest.swift */,
+				AE2A94781C058C2300AC34C2 /* BingWallPaper.swift */,
+				AEBE0EAB1C05562400E2E976 /* ViewModel.swift */,
+			);
+			name = BingViewModel;
+			sourceTree = "<group>";
+		};
+		AE1867851C08064700B4B1FC /* FlickrViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AE707B471C07F82800221A71 /* FlickrPeopleInfo.swift */,
+				AE1867811C07FBCA00B4B1FC /* FlickrPhotoInfo.swift */,
+				AE1867861C08065A00B4B1FC /* FlickrViewModel.swift */,
+			);
+			name = FlickrViewModel;
+			sourceTree = "<group>";
+		};
+		AE707B441C07F36700221A71 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AE1867851C08064700B4B1FC /* FlickrViewModel */,
+				AE1867841C08063600B4B1FC /* BingViewModel */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		AE707B451C07F37600221A71 /* Project Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEBE0EA01C0554F200E2E976 /* Assets.xcassets */,
+				AEBE0EA51C0554F300E2E976 /* Info.plist */,
+				AEBE0EA21C0554F300E2E976 /* Main.storyboard */,
+				AE2A94741C0559DE00AC34C2 /* BingWallpaper-Bridging-Header.h */,
+				AE2A947A1C05A46500AC34C2 /* BingWallpaper.entitlements */,
+			);
+			name = "Project Support Files";
+			sourceTree = "<group>";
+		};
+		AE707B461C07F39200221A71 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AE1867831C07FF7000B4B1FC /* Common */,
+				AEBE0E9C1C0554F200E2E976 /* AppDelegate.swift */,
+				AEBE0E9E1C0554F200E2E976 /* ViewController.swift */,
+				AE707B441C07F36700221A71 /* ViewModel */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		AEBE0E901C0554F200E2E976 = {
+			isa = PBXGroup;
+			children = (
+				AEBE0E9B1C0554F200E2E976 /* BingWallpaper */,
+				AEBE0E9A1C0554F200E2E976 /* Products */,
+				555D96BC8A636414163A0A83 /* Pods */,
+				264017D30423AC5F466C7B3F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AEBE0E9A1C0554F200E2E976 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEBE0E991C0554F200E2E976 /* BingWallpaper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEBE0E9B1C0554F200E2E976 /* BingWallpaper */ = {
+			isa = PBXGroup;
+			children = (
+				AE707B461C07F39200221A71 /* Classes */,
+				AE707B451C07F37600221A71 /* Project Support Files */,
+			);
+			path = BingWallpaper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEBE0E981C0554F200E2E976 /* BingWallpaper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEBE0EA81C0554F300E2E976 /* Build configuration list for PBXNativeTarget "BingWallpaper" */;
+			buildPhases = (
+				0340FBAC15AA3B6D9E6CE509 /* Check Pods Manifest.lock */,
+				AEBE0E951C0554F200E2E976 /* Sources */,
+				AEBE0E961C0554F200E2E976 /* Frameworks */,
+				AEBE0E971C0554F200E2E976 /* Resources */,
+				303A2F3F7551DBFFC3C65D0A /* Embed Pods Frameworks */,
+				C462D238CF2F43855A10D712 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BingWallpaper;
+			productName = BingWallpaper;
+			productReference = AEBE0E991C0554F200E2E976 /* BingWallpaper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEBE0E911C0554F200E2E976 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Junna;
+				TargetAttributes = {
+					AEBE0E981C0554F200E2E976 = {
+						CreatedOnToolsVersion = 7.1.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = AEBE0E941C0554F200E2E976 /* Build configuration list for PBXProject "BingWallpaper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEBE0E901C0554F200E2E976;
+			productRefGroup = AEBE0E9A1C0554F200E2E976 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEBE0E981C0554F200E2E976 /* BingWallpaper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEBE0E971C0554F200E2E976 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEBE0EA11C0554F200E2E976 /* Assets.xcassets in Resources */,
+				AEBE0EA41C0554F300E2E976 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0340FBAC15AA3B6D9E6CE509 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		303A2F3F7551DBFFC3C65D0A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C462D238CF2F43855A10D712 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEBE0E951C0554F200E2E976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEBE0E9F1C0554F200E2E976 /* ViewController.swift in Sources */,
+				AE1867871C08065A00B4B1FC /* FlickrViewModel.swift in Sources */,
+				AE1867821C07FBCA00B4B1FC /* FlickrPhotoInfo.swift in Sources */,
+				AE2A94771C05896A00AC34C2 /* HTTPRequest.swift in Sources */,
+				AEBE0EAC1C05562400E2E976 /* ViewModel.swift in Sources */,
+				AE18678B1C08389200B4B1FC /* KeyValueObject.swift in Sources */,
+				AE2A94791C058C2300AC34C2 /* BingWallPaper.swift in Sources */,
+				AE1867891C0807F100B4B1FC /* FlickrHttpRequest.swift in Sources */,
+				AEBE0E9D1C0554F200E2E976 /* AppDelegate.swift in Sources */,
+				AE2A947C1C05A6F600AC34C2 /* Utils.swift in Sources */,
+				AE707B481C07F82800221A71 /* FlickrPeopleInfo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AEBE0EA21C0554F300E2E976 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEBE0EA31C0554F300E2E976 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEBE0EA61C0554F300E2E976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AEBE0EA71C0554F300E2E976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AEBE0EA91C0554F300E2E976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F57F368ECD9B3F1A9A2BE107 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BingWallpaper/BingWallpaper.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BingWallpaper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Junna.BingWallpaper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/BingWallpaper/BingWallpaper-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		AEBE0EAA1C0554F300E2E976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5377E94F8182F5F5D5515068 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BingWallpaper/BingWallpaper.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BingWallpaper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Junna.BingWallpaper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/BingWallpaper/BingWallpaper-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEBE0E941C0554F200E2E976 /* Build configuration list for PBXProject "BingWallpaper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEBE0EA61C0554F300E2E976 /* Debug */,
+				AEBE0EA71C0554F300E2E976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEBE0EA81C0554F300E2E976 /* Build configuration list for PBXNativeTarget "BingWallpaper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEBE0EA91C0554F300E2E976 /* Debug */,
+				AEBE0EAA1C0554F300E2E976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEBE0E911C0554F200E2E976 /* Project object */;
+}
