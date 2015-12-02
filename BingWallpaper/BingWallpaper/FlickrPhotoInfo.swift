@@ -55,7 +55,7 @@ class FlickrPhotoInfo: XMLBasedObject {
     
     var localPath: String {
         get {
-            return Utils.imagesDictionary().stringByAppendingPathComponent("\(title)_\(id).\(originalformat)")
+            return Utils.imagesDictionary().stringByAppendingPathComponent("\(id).\(originalformat)")
         }
     }
     
@@ -81,6 +81,12 @@ class FlickrPhotoInfo: XMLBasedObject {
             let session = NSURLSession(configuration: configure, delegate: self, delegateQueue: nil)
             let task = session.downloadTaskWithURL(url)
             task.resume()
+        }
+    }
+    
+    override func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+        if elementName == "photo" {
+            self.setValues(attributeDict)
         }
     }
     

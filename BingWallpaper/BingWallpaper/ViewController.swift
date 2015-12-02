@@ -9,7 +9,7 @@
 import Cocoa
 
 class ViewController: NSViewController {
-    var model: ViewModel?
+    var model: FlickrViewModel?
     
     lazy var progressor: NSProgressIndicator = {
         let pro = NSProgressIndicator(frame: self.view.frame)
@@ -19,11 +19,13 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        model = ViewModel()
+        model = FlickrViewModel()
         model?.delegate = self
         model?.loadViewModel()
         self.view.addSubview(progressor)
         progressor.startAnimation(nil)
+        
+        NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "reload", userInfo: nil, repeats: true)
     }
     
     func reload() {
@@ -34,10 +36,11 @@ class ViewController: NSViewController {
             let workspace   = NSWorkspace.sharedWorkspace()
             let screen      = NSScreen.mainScreen()
             do {
-                if let url = viewModel.wallPaperURL {
+                if let url = viewModel.wallPaperURL() {
                     print("WallPaper: \(url)")
                     try workspace.setDesktopImageURL(url, forScreen: screen!, options: [:])
                 }
+                viewModel.fetchNextPhoto()
             } catch let error as NSError {
                 print("Error: \(error.domain)")
             }

@@ -8,6 +8,7 @@
 
 import Foundation
 import Darwin
+import Cocoa
 
 let BaseApiURL  : String = "https://api.flickr.com/services/rest"
 let AppKey      : String = "c6951490319c13c8c1f60d80453309a2"
@@ -26,13 +27,14 @@ private enum FlickrApiMethod: String {
 }
 
 class FlickrViewModel {
+    weak var delegate : ViewController?
     private var photographer    : FlickrPeopleInfo
     private var wallPaperInfo   : FlickrPhotoInfo
     init() {
         photographer    = FlickrPeopleInfo()
         wallPaperInfo   = FlickrPhotoInfo()
     }
-    
+    private var initiallized : Bool = false
     func loadViewModel() {
         fetchPeopleInfo()
     }
@@ -42,9 +44,7 @@ class FlickrViewModel {
             return NSURL(fileURLWithPath: wallPaperInfo.localPath)
         } else {
             // If there is no new photo, fetch new photos from server. And search local folder, randomly pick one.
-            if let id = photographer.photos.popFirst() {
-                fetchPhotoInfo(withId: id)
-            }
+            print("Use one old pic")
             do {
                 let fm = NSFileManager.defaultManager()
                 let localPhotos = try fm.contentsOfDirectoryAtPath(Utils.imagesDictionary() as String)
@@ -61,6 +61,14 @@ class FlickrViewModel {
         }
     }
     
+    func fetchNextPhoto() {
+        if let photoId = photographer.ownPhotos.popFirst() {
+            fetchPhotoInfo(withId: photoId)
+        } else {
+            fetchPhotos()
+        }
+    }
+    
     private func fetchPeopleInfo() {
         let request = FlickrHttpRequest(type: .XML)
         request.url = BaseApiURL
@@ -74,7 +82,6 @@ class FlickrViewModel {
     }
     
     private var page: Int = 1
-    private var readyToFetchPhotoInfo: Bool = false
     private func fetchPhotos() {
         let request = FlickrHttpRequest(type: .XML)
         request.url = BaseApiURL
@@ -83,13 +90,16 @@ class FlickrViewModel {
         request.tag = RequestType.Photos.rawValue
         request.start()
     }
+    
     private func fetchPhotosSuccess() {
         page++
         if page > photographer.totalPages {
             print("All photos from photographer \(photographer.username) downloaded!\n Maybe try other Photographer :) ")
             page = 1
         }
-        readyToFetchPhotoInfo = true
+        if !photographer.ownPhotos.isEmpty {
+            fetchNextPhoto()
+        }
     }
     
     private var readyToDownloadNewPhoto: Bool = false
@@ -101,11 +111,6 @@ class FlickrViewModel {
         request.tag = RequestType.PhotoInfo.rawValue
         request.start()
     }
-    private func fetchPhotoInfoSuccess() {
-        wallPaperInfo.download()
-    }
-    
-    
 }
 
 extension FlickrViewModel: FlickrHttpRequestDelegate {
@@ -121,16 +126,19 @@ extension FlickrViewModel: FlickrHttpRequestDelegate {
                     photographer.parse(parser)
                     fetchPhotosSuccess()
                 case .PhotoInfo:
+                    wallPaperInfo = FlickrPhotoInfo()
                     wallPaperInfo.parse(parser)
                     wallPaperInfo.download()
-                default:
-                    break
+                    if !initiallized {
+                        initiallized = true
+                        delegate?.reload()
+                    }
                 }
             }
         }
     }
     
     func onFailure(request: FlickrHttpRequest, error: NSError!) {
-        
+        print("Network Error!")
     }
 }

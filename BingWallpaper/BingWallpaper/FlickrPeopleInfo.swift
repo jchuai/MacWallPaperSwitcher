@@ -33,7 +33,7 @@ class FlickrPeopleInfo: XMLBasedObject {
     var nsid        : String            = ""
     var username    : String            = ""
     var count       : Int               = 0
-    var photos      : Set<String>       = []
+    var ownPhotos      : Set<String>       = []
     var pages       : String            = ""
     
     var totalPages: Int {
@@ -46,14 +46,14 @@ class FlickrPeopleInfo: XMLBasedObject {
     func parserDidStartDocument(parser: NSXMLParser) {
         if parserTag == RequestType.Photos.rawValue {
             // 清空photos旧照片，准备存储新的photos
-            photos.removeAll(keepCapacity: true)
+            ownPhotos.removeAll(keepCapacity: true)
         }
     }
     override func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         if elementName == "photo" {
             for key in attributeDict.keys {
                 if key == "id" {
-                    photos.insert(attributeDict[key]!)
+                    ownPhotos.insert(attributeDict[key]!)
                 } else {
                     self.setValue(attributeDict[key]!, forKey: key)
                 }
