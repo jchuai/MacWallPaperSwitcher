@@ -11,6 +11,7 @@ import Cocoa
 class ViewController: NSViewController {
     var model: FlickrViewModel?
     
+    @IBOutlet weak var textField: NSTextField!
     lazy var progressor: NSProgressIndicator = {
         let pro = NSProgressIndicator(frame: self.view.frame)
         pro.style = .SpinningStyle
@@ -25,7 +26,7 @@ class ViewController: NSViewController {
         self.view.addSubview(progressor)
         progressor.startAnimation(nil)
         
-        NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "reload", userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(15 * 60, target: self, selector: "reload", userInfo: nil, repeats: true)
     }
     
     func reload() {
@@ -37,6 +38,7 @@ class ViewController: NSViewController {
             let screen      = NSScreen.mainScreen()
             do {
                 if let url = viewModel.wallPaperURL() {
+                    textField.stringValue = "\(textField.stringValue)\n更新图片: \(url)"
                     print("WallPaper: \(url)")
                     try workspace.setDesktopImageURL(url, forScreen: screen!, options: [:])
                 }
